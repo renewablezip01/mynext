@@ -69,12 +69,9 @@ export default function Home({number}) {
 }
 
 export async function getStaticProps() {
-  console.log(process.env.DOMAIN);
-const js = await fetch(process.env.DOMAIN + "/api/hello");
-const awaited = await js.json();
 return {
   props: {
-    number: awaited.nummy,
+    number: 0,
   },
   revalidate: 5,
 }
